@@ -1,10 +1,13 @@
+import 'package:bblock_ecommerce/constants/colors.dart';
+import 'package:bblock_ecommerce/features/splash/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'package:bblock_ecommerce/features/home/home_screen.dart';
 import 'package:bblock_ecommerce/routing/app_routers.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -25,11 +28,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ecommerce',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: bTextWhiteColor),
+        useMaterial3: false,
+        fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreenUI(),
+      home: const OnBordingScreenUI(),
       onGenerateRoute: appRouter.onGenerateRoute,
     );
   }
