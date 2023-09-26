@@ -1,7 +1,6 @@
 import 'package:bblock_ecommerce/common_widgets/buttons/bblock_button.dart';
 import 'package:bblock_ecommerce/constants/colors.dart';
 import 'package:bblock_ecommerce/features/authentication/signin/sign_in_screen.dart';
-import 'package:bblock_ecommerce/features/home/home_screen.dart';
 import 'package:bblock_ecommerce/features/splash/widgets/indicators.dart';
 import 'package:bblock_ecommerce/features/splash/widgets/onboard_content.dart';
 import 'package:flutter/material.dart';

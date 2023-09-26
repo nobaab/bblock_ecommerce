@@ -1,6 +1,7 @@
 import 'package:bblock_ecommerce/constants/colors.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class BblockTextFiled extends StatefulWidget {
   BblockTextFiled({super.key, required this.hintText, this.suffixIcon});
 
