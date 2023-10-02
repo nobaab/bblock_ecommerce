@@ -1,5 +1,7 @@
+import 'package:bblock_ecommerce/common_widgets/navbar/custom_bottom_navbar.dart';
 import 'package:bblock_ecommerce/common_widgets/textfields/custom_search_filed.dart';
 import 'package:bblock_ecommerce/constants/colors.dart';
+import 'package:bblock_ecommerce/features/categories/all_categories_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -67,6 +69,9 @@ class _HomeScreenUiState extends State<HomeScreenUI> {
             buildGridView(),
           ],
         ),
+      ),
+      bottomNavigationBar: const CustomBottomNavigation(
+        currentIndex: 0,
       ),
     );
   }
@@ -158,7 +163,9 @@ class _HomeScreenUiState extends State<HomeScreenUI> {
           style: TextStyle(fontSize: 19, fontWeight: FontWeight.w600, color: bTextBlackColor),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, AllCategoriesScrrenUI.id);
+          },
           child: Text(
             "See All",
             style: TextStyle(color: mainColor),
