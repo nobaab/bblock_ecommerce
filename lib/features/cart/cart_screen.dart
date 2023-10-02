@@ -38,14 +38,14 @@ class CartScreenUI extends StatelessWidget {
                       return Stack(
                         children: [
                           Container(
-                            margin: const EdgeInsets.fromLTRB(4, 6, 4, 0),
+                            margin: const EdgeInsets.fromLTRB(4, 10, 4, 0),
                             height: MediaQuery.sizeOf(context).height * 0.139,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               color: mainColor,
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(10.0),
                               child: Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Row(
@@ -69,6 +69,12 @@ class CartScreenUI extends StatelessWidget {
                                         color: bTextBlackColor,
                                         size: 22,
                                       )),
+                                    ),
+                                    SizedBox(width: MediaQuery.sizeOf(context).width * 0.02),
+                                    Text(
+                                      "1",
+                                      style: popinsTitle.copyWith(
+                                          fontSize: 14, fontWeight: FontWeight.w600, color: bTextWhiteColor),
                                     ),
                                     SizedBox(width: MediaQuery.sizeOf(context).width * 0.02),
                                     Container(
